@@ -1,0 +1,93 @@
+body > div > form > div:nth-child(4) > div{
+    display: flex;
+    flex-flow: column;
+}
+
+body > div > form > div:nth-child(4) > div > button{
+    margin-top: 5%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(1) > label{
+    padding-right: 6%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(2) > label{
+    padding-right: 6%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(3) > label{
+    padding-right: 6%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(1) > input[type=text]{
+    width: 70%;
+    padding: 1%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(2) > input[type=text]{
+    width: 70%;
+    padding: 1%;
+}
+
+body > div > form > div:nth-child(1) > div:nth-child(3) > input[type=text]{
+    width: 70%;
+    padding: 1%;
+}
+
+body > div > form > div:nth-child(1) > button{
+    margin-left: 6%;
+    margin-bottom: 2%;
+    width: 12%;
+}
+
+body > div > div > div > input[type=text]{
+    margin-left: 62%;
+    margin-bottom: 5%;
+    width: 15%;
+    padding: .3%;
+}
+
+body > div > div > div > button{
+    margin-left: 1%;
+}
+
+h2{
+    color: #5cb85c;
+}
+
+label{
+    color: #5cb85c;
+}
+
+body > div > form > div:nth-child(3) > div > button{
+    margin-left: 1%;
+    padding: 1%;
+}
+
+body > div > form > div:nth-child(3) > div > input[type=text]{
+    width: 15%;
+    padding: 1%;
+}
+
+body > div > form > div:nth-child(3) > div{
+    padding-top: 5%;
+    /* padding-bottom: 1%; */
+}
+
+body > div > form > div:nth-child(4) > div{
+    width: 26%;
+}
+
+body > div > form > div:nth-child(4) > div{
+    margin-left: 45%;
+    margin-bottom: 5%;
+}
+
+body > div > form > div:nth-child(4) > div > input[type=text]{
+    padding: 2%;
+    width: 110%;
+}
+
+body > div > form > div:nth-child(4) > div > button{
+    width: 110%;
+}

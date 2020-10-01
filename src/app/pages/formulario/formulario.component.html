@@ -1,34 +1,105 @@
-<div class="añadir">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+  <div>
+    <div class="top-content">
+      <div class="form-group col-md-12">
+        <label for="label"><h2>Ciudades</h2></label>       
+        <!-- <label for="inputEncontrar">Buscar Ciudad:</label> -->
+        <input type="text" placeholder="Introduce codigo" #encontrar />
+        <button (click)="encontrarCiudad(encontrar)" class="btn btn-success mb-2">Buscar Ciudad</button>
+      </div>
+    </div>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputCiudad">Ciudad:</label>
+          <input type="text" placeholder="Introduce ciudad" #ciudad />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputPais">País:</label>
+          <input type="text" placeholder="Introduce pais" #pais />
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputCodigo">Código:</label>
+          <input type="text" placeholder="Introduce codigo" #codigo />
+        </div>
+        <button (click)="crear(ciudad.value, pais.value, codigo.value)" class="btn btn-success mb-2">Añadir Ciudad</button>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <p *ngIf="ciudadEncontrada != null">
+            Ciudad Encontrada: {{ ciudadEncontrada.nombre }}
+          </p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12 col-pt-2">
+          <input type="text" placeholder="Introduce codigo" #borrar />    
+          <button (click)="eliminarCiudad(borrar)" class="btn btn-success mb-2">Borrar Ciudad</button>
+        </div>
+      </div>
+      <div class="form-row">
+      <div class="form-group col-md-5">
+        <label for="inputReferencia">Editar por codigo:</label>
+          <input type="text" placeholder="Introduce el codigo a editar" #code />
+        <label for="inputModificarCiudad">Modificar ciudad:</label>
+          <input type="text" placeholder="Introduce una nueva ciudad" #ciudadNew />
+        <label for="inputModificarPais">Modificar pais:</label>
+          <input type="text" placeholder="Introduce un nuevo pais" #paisNew />
+        <label for="inputModificarCodigo">Modificar codigo:</label>
+          <input type="text" placeholder="Introduce un nuevo codigo" #codigoNew />  
+        <button (click)="editCity(code.value,ciudadNew.value, paisNew.value, codigoNew.value)" class="btn btn-success mb-2">Editar Ciudad</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</body>
+</html>
+
+<!-- <div class="añadir">
   Nombre Ciudad: <input type="text" #ciudad /><br />
   Nombre Pais: <input type="text" #pais /><br />
   Codigo Ciudad: <input type="text" #codigo /><br />
 
   <button (click)="crear(ciudad.value, pais.value, codigo.value)">
     Añadir Ciudad
-  </button>
+  </button> -->
 
-  <div class="encontrar">
+  <!-- <div class="encontrar">
     Encuentra tu Ciudad: <input type="text" #encontrar /><br/>
 
     <button (click)="encontrarCiudad(encontrar)">Encontrar Ciudad</button>
-  </div>
-  <p *ngIf="ciudadEncontrada != null">
+  </div> -->
+  <!-- <p *ngIf="ciudadEncontrada != null">
     Ciudad Encontrada: {{ ciudadEncontrada.nombre }}
-  </p>
+  </p> -->
 
-  <div class="borrar">
+  <!-- <div class="borrar">
     Borrar Ciudad: <input type="text" #borrar /><br />
 
     <button (click)="eliminarCiudad(borrar)">Borrar Ciudad</button>
-  </div>
+  </div> -->
 
-  <div class="editar">
-    Codigo para cambiar: <input type="text" #code /><br/>
-    Nombre Ciudad: <input type="text" #ciudadNew /><br/>
-    Nombre Pais: <input type="text" #paisNew /><br/>
-    Codigo Ciudad: <input type="text" #codigoNew /><br/>
+  <!-- <div class="editar"> -->
+    <!-- Codigo para cambiar: <input type="text" #code /><br/>
+    Nombre Ciudad: <input type="text" #ciudadNew /><br/> -->
+    <!-- Nombre Pais: <input type="text" #paisNew /><br/> -->
+    <!-- Codigo Ciudad: <input type="text" #codigoNew /><br/>
   
     <button (click)="editCity(code.value,ciudadNew.value, paisNew.value, codigoNew.value)">
       Editar Ciudad
-    </button>
-</div>
+    </button> -->
+<!-- </div> -->
+
+
