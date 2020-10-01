@@ -9,6 +9,8 @@ import { Ciudad } from 'src/app/models/ciudad';
 })
 export class FormularioComponent implements OnInit {
 
+  public ciudadEncontrada: Ciudad = null;
+
   constructor(public misServicios: MisServiciosService) { }
 
   public crear(nombre:string, pais:string, codigo:string)
@@ -24,6 +26,12 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public find(codigo:HTMLInputElement){
+    this.ciudadEncontrada = this.misServicios.getOne(codigo.value)
+       console.log(this.ciudadEncontrada);
+       
   }
 
 }

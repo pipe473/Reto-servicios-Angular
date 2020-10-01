@@ -4,4 +4,13 @@
     Codigo Ciudad: <input type="text" #codigo><br>
 
     <button (click)="crear(ciudad.value, pais.value, codigo.value)">Mostrar Ciudad</button>
+
+    <div class="encontrar">
+        Encuentra tu Ciudad: <input type="text" #encontrar><br>
+
+        <button (click)="find(encontrar)"></button>
+    </div>
+    <p *ngIf="ciudadEncontrada !=null">
+        Ciudad Encontrada: {{ciudadEncontrada.nombre}}
+     </p>
 </div>

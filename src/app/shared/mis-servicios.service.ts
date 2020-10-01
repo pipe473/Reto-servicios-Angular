@@ -16,6 +16,17 @@ export class MisServiciosService {
    return this.ciudades;
   }
 
+  // Metodo para obtener una ciudad en concreto desde el formulario por su codigo
+  getOne(codigo: string): Ciudad {
+    let resultado: Ciudad = null;
+    for (let i = 0; i < this.ciudades.length; i++) {
+      if (codigo === this.ciudades[i].codigo) {
+        resultado = this.ciudades[i];
+      }
+    }
+    return resultado;
+  }
+
   // Metodo para añadir ciudad
   public add(ciudad:Ciudad): boolean{
     let estado = false;
