@@ -8,7 +8,7 @@
     <div class="encontrar">
         Encuentra tu Ciudad: <input type="text" #encontrar><br>
 
-        <button (click)="find(encontrar)"></button>
+        <button (click)="encontrarCiudad(encontrar)"></button>
     </div>
     <p *ngIf="ciudadEncontrada !=null">
         Ciudad Encontrada: {{ciudadEncontrada.nombre}}

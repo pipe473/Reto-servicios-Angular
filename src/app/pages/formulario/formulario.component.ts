@@ -28,7 +28,7 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public find(codigo:HTMLInputElement){
+  public encontrarCiudad(codigo:HTMLInputElement){
     this.ciudadEncontrada = this.misServicios.getOne(codigo.value)
        console.log(this.ciudadEncontrada);
        
