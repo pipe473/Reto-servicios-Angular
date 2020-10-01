@@ -17,9 +17,9 @@ export class FormularioComponent implements OnInit {
     let ciudad = new Ciudad(nombre, pais, codigo);
     let nuevoEstado = this.misServicios.add(ciudad);
     if (nuevoEstado == true) {
-      alert('Ciudad creada!');
+      console.log('Ciudad creada bien!');
     } else {
-      alert('Algo ha ido mal!');
+      console.log('Algo ha ido mal!');
     }
   }
 
@@ -34,8 +34,15 @@ export class FormularioComponent implements OnInit {
   //Metodo del controlador que llama al metodo del servicio para eliminar una ciudad por su codigo
   public eliminarCiudad(codigo:HTMLInputElement){
     this.misServicios.delete(codigo.value);
-    console.log("ciudad eliminada correctamente!");
+    // console.log("ciudad eliminada correctamente!");
     console.log(codigo.value);
+   }
+
+   // Metodo del controlador que llama al metodo del servicio para editar una ciudad
+   public editCity(code: string,  ciudadNew :string,paisNew:string,codigoNew:string){
+     this.misServicios.edit(code, new Ciudad(ciudadNew,paisNew,codigoNew))
+     console.log(this.misServicios.edit(code, new Ciudad(ciudadNew,paisNew,codigoNew)));
+     
    }
  
 }

@@ -45,4 +45,18 @@ export class MisServiciosService {
       }
     }
   }
+
+
+  // Metodo para editar los datos por medio del codigo de la ciudad
+  edit(code:string, ciudad:Ciudad): boolean{
+    let ciudadUpdate = new Ciudad(ciudad.nombre,ciudad.pais,ciudad.codigo)
+    let estado = false;
+    for (let i = 0; i < this.ciudades.length; i++) {
+      if (code == this.ciudades[i].codigo && ciudad != null ) {
+        estado = true;
+        this.ciudades[i] = ciudadUpdate;
+      }
+      return estado;
+    }
+  }
 }

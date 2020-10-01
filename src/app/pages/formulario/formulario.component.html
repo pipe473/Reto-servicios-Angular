@@ -1,16 +1,16 @@
-<div class="contenido">
+<div class="añadir">
   Nombre Ciudad: <input type="text" #ciudad /><br />
   Nombre Pais: <input type="text" #pais /><br />
   Codigo Ciudad: <input type="text" #codigo /><br />
 
   <button (click)="crear(ciudad.value, pais.value, codigo.value)">
-    Mostrar Ciudad
+    Añadir Ciudad
   </button>
 
   <div class="encontrar">
-    Encuentra tu Ciudad: <input type="text" #encontrar /><br />
+    Encuentra tu Ciudad: <input type="text" #encontrar /><br/>
 
-    <button (click)="encontrarCiudad(encontrar)"></button>
+    <button (click)="encontrarCiudad(encontrar)">Encontrar Ciudad</button>
   </div>
   <p *ngIf="ciudadEncontrada != null">
     Ciudad Encontrada: {{ ciudadEncontrada.nombre }}
@@ -19,6 +19,16 @@
   <div class="borrar">
     Borrar Ciudad: <input type="text" #borrar /><br />
 
-    <button (click)="eliminarCiudad(borrar)"></button>
+    <button (click)="eliminarCiudad(borrar)">Borrar Ciudad</button>
   </div>
+
+  <div class="editar">
+    Codigo para cambiar: <input type="text" #code /><br/>
+    Nombre Ciudad: <input type="text" #ciudadNew /><br/>
+    Nombre Pais: <input type="text" #paisNew /><br/>
+    Codigo Ciudad: <input type="text" #codigoNew /><br/>
+  
+    <button (click)="editCity(code.value,ciudadNew.value, paisNew.value, codigoNew.value)">
+      Editar Ciudad
+    </button>
 </div>
