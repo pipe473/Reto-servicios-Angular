@@ -1,16 +1,24 @@
 <div class="contenido">
-    Nombre Ciudad: <input type="text" #ciudad><br>
-    Nombre Pais: <input type="text" #pais><br>
-    Codigo Ciudad: <input type="text" #codigo><br>
+  Nombre Ciudad: <input type="text" #ciudad /><br />
+  Nombre Pais: <input type="text" #pais /><br />
+  Codigo Ciudad: <input type="text" #codigo /><br />
 
-    <button (click)="crear(ciudad.value, pais.value, codigo.value)">Mostrar Ciudad</button>
+  <button (click)="crear(ciudad.value, pais.value, codigo.value)">
+    Mostrar Ciudad
+  </button>
 
-    <div class="encontrar">
-        Encuentra tu Ciudad: <input type="text" #encontrar><br>
+  <div class="encontrar">
+    Encuentra tu Ciudad: <input type="text" #encontrar /><br />
 
-        <button (click)="encontrarCiudad(encontrar)"></button>
-    </div>
-    <p *ngIf="ciudadEncontrada !=null">
-        Ciudad Encontrada: {{ciudadEncontrada.nombre}}
-     </p>
+    <button (click)="encontrarCiudad(encontrar)"></button>
+  </div>
+  <p *ngIf="ciudadEncontrada != null">
+    Ciudad Encontrada: {{ ciudadEncontrada.nombre }}
+  </p>
+
+  <div class="borrar">
+    Borrar Ciudad: <input type="text" #borrar /><br />
+
+    <button (click)="eliminarCiudad(borrar)"></button>
+  </div>
 </div>

@@ -5,23 +5,15 @@ import { Ciudad } from 'src/app/models/ciudad';
 @Component({
   selector: 'app-vista',
   templateUrl: './vista.component.html',
-  styleUrls: ['./vista.component.css']
+  styleUrls: ['./vista.component.css'],
 })
 export class VistaComponent implements OnInit {
-
-  // ESta variable es la que llamo desde mi vista.html
+  // Esta variable es la que llamo desde mi vista(ciudades)
   public ciudades: Ciudad[];
- 
 
   constructor(public misServicios: MisServiciosService) {
-     this.ciudades = this.misServicios.getAll();    
-
-   }
-
-  ngOnInit(): void {
-
+    this.ciudades = this.misServicios.getAll();
   }
 
- 
-   
+  ngOnInit(): void {}
 }
